@@ -193,23 +193,44 @@ export default function Home() {
               A Secure Bridge Between Organizations and Ethical Hackers
             </h2>
             {/* Table for presenter information with glass blur effect */}
-            <div className="backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl p-4 sm:p-6 mx-auto max-w-2xl">
-              <table className="w-full text-left">
-                <tbody className="space-y-2">
-                  <tr className="flex flex-col sm:table-row">
-                    <td className="font-semibold text-white py-2 pr-0 sm:pr-4 text-sm sm:text-base">Presented by:</td>
-                    <td className="text-gray-300 py-2 text-sm sm:text-base break-words">Muhammad Qasim Riaz, Shahzaib Ahmad, Shahzaib, Tauseef Ahmad</td>
-                  </tr>
-                  <tr className="flex flex-col sm:table-row">
-                    <td className="font-semibold text-white py-2 pr-0 sm:pr-4 text-sm sm:text-base">Supervisor:</td>
-                    <td className="text-gray-300 py-2 text-sm sm:text-base">Ma'am Sumbal Fatima</td>
-                  </tr>
-                  <tr className="flex flex-col sm:table-row">
-                    <td className="font-semibold text-white py-2 pr-0 sm:pr-4 text-sm sm:text-base">Department:</td>
-                    <td className="text-gray-300 py-2 text-sm sm:text-base break-words">Department of Computer Science – GIFT University, Gujranwala</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl p-4 sm:p-5 md:p-6 mx-auto w-full">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Presented By</h3>
+              <div className="overflow-x-auto mb-4 sm:mb-6">
+                <table className="w-full text-left border-collapse min-w-[300px]">
+                  <thead>
+                    <tr className="border-b border-white/20">
+                      <th className="p-2 sm:p-3 text-white font-semibold text-xs sm:text-sm md:text-base">Name</th>
+                      <th className="p-2 sm:p-3 text-white font-semibold text-xs sm:text-sm md:text-base">Roll No</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-300">
+                    <tr className="border-b border-white/10">
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">Muhammad Qasim Riaz</td>
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">221370003</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">Shahzaib Ahmad</td>
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">221370078</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">Shahzaib</td>
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">221370089</td>
+                    </tr>
+                    <tr className="border-b border-white/10">
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">Tauseef Ahmad</td>
+                      <td className="p-2 sm:p-3 text-xs sm:text-sm md:text-base">221370079</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div className="pt-3 sm:pt-4 border-t border-white/10 space-y-2">
+                <p className="text-xs sm:text-sm md:text-base text-gray-300 text-center">
+                  <span className="font-semibold text-white">Supervisor:</span> Ma'am Sumbal Fatima
+                </p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-300 text-center">
+                  <span className="font-semibold text-white">Department:</span> Department of Computer Science – GIFT University, Gujranwala
+                </p>
+              </div>
             </div>
           </div>
         </div>
