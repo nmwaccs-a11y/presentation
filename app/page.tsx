@@ -182,31 +182,31 @@ export default function Home() {
         {/* Slide 0 - Title */}
         <div 
           ref={(el) => { slideRefs.current[0] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
-          style={{ paddingTop: '80px' }}
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="text-center max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               Pakistan Bug Bounty Platform (PBBP)
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-purple-300 mb-6 sm:mb-8 backdrop-blur-lg bg-black/30 p-4 rounded-lg border border-white/10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-purple-300 mb-6 sm:mb-8 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-lg border border-white/10">
               A Secure Bridge Between Organizations and Ethical Hackers
             </h2>
             {/* Table for presenter information with glass blur effect */}
-            <div className="backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl p-6 mx-auto max-w-2xl">
+            <div className="backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl p-4 sm:p-6 mx-auto max-w-2xl">
               <table className="w-full text-left">
                 <tbody className="space-y-2">
-                  <tr>
-                    <td className="font-semibold text-white py-2 pr-4">Presented by:</td>
-                    <td className="text-gray-300 py-2">Muhammad Qasim Riaz, Shahzaib Ahmad, Shahzaib, Tauseef Ahmad</td>
+                  <tr className="flex flex-col sm:table-row">
+                    <td className="font-semibold text-white py-2 pr-0 sm:pr-4 text-sm sm:text-base">Presented by:</td>
+                    <td className="text-gray-300 py-2 text-sm sm:text-base break-words">Muhammad Qasim Riaz, Shahzaib Ahmad, Shahzaib, Tauseef Ahmad</td>
                   </tr>
-                  <tr>
-                    <td className="font-semibold text-white py-2 pr-4">Supervisor:</td>
-                    <td className="text-gray-300 py-2">Ma'am Sumbal Fatima</td>
+                  <tr className="flex flex-col sm:table-row">
+                    <td className="font-semibold text-white py-2 pr-0 sm:pr-4 text-sm sm:text-base">Supervisor:</td>
+                    <td className="text-gray-300 py-2 text-sm sm:text-base">Ma'am Sumbal Fatima</td>
                   </tr>
-                  <tr>
-                    <td className="font-semibold text-white py-2 pr-4">Department:</td>
-                    <td className="text-gray-300 py-2">Department of Computer Science – GIFT University, Gujranwala</td>
+                  <tr className="flex flex-col sm:table-row">
+                    <td className="font-semibold text-white py-2 pr-0 sm:pr-4 text-sm sm:text-base">Department:</td>
+                    <td className="text-gray-300 py-2 text-sm sm:text-base break-words">Department of Computer Science – GIFT University, Gujranwala</td>
                   </tr>
                 </tbody>
               </table>
@@ -217,18 +217,19 @@ export default function Home() {
         {/* Slide 1 - Table of Contents */}
         <div 
           ref={(el) => { slideRefs.current[1] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-10 text-center backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Table of Contents</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 md:mb-8 text-center backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Table of Contents</h1>
             {/* Table format for table of contents with glass blur effect */}
-            <div className="backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl overflow-hidden">
-              <table className="w-full text-left">
+            <div className="backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl overflow-x-auto">
+              <table className="w-full text-left min-w-[600px]">
                 <thead>
                   <tr className="border-b border-white/20 bg-black/20">
-                    <th className="p-4 text-white font-semibold text-left">No.</th>
-                    <th className="p-4 text-white font-semibold text-left">Title</th>
-                    <th className="p-4 text-white font-semibold text-left">Description</th>
+                    <th className="p-2 sm:p-4 text-white font-semibold text-left text-xs sm:text-sm">No.</th>
+                    <th className="p-2 sm:p-4 text-white font-semibold text-left text-xs sm:text-sm">Title</th>
+                    <th className="p-2 sm:p-4 text-white font-semibold text-left text-xs sm:text-sm">Description</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -238,9 +239,9 @@ export default function Home() {
                       onClick={() => scrollToSlide(index + 2)}
                       className="border-b border-white/10 hover:bg-purple-900/20 cursor-pointer transition-all duration-300"
                     >
-                      <td className="p-4 text-purple-400 font-bold">{slide.id}.</td>
-                      <td className="p-4 text-white font-medium">{slide.title}</td>
-                      <td className="p-4 text-gray-300">{slide.name}</td>
+                      <td className="p-2 sm:p-4 text-purple-400 font-bold text-xs sm:text-base">{slide.id}.</td>
+                      <td className="p-2 sm:p-4 text-white font-medium text-xs sm:text-base">{slide.title}</td>
+                      <td className="p-2 sm:p-4 text-gray-300 text-xs sm:text-base">{slide.name}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -252,11 +253,12 @@ export default function Home() {
         {/* Slide 2 - Introduction */}
         <div 
           ref={(el) => { slideRefs.current[2] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">What are Cyber Attacks?</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">What are Cyber Attacks?</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>In today's digital world, cyber attacks are one of the biggest threats faced by individuals, organizations, and governments. A cyber attack refers to any unauthorized attempt to access, steal, alter, or destroy digital information.</p>
               <p>These attacks come in many forms: phishing emails that trick users into sharing credentials, ransomware that locks files for ransom, DDoS attacks that overwhelm servers, and website defacements that damage credibility.</p>
               <p>Even a single unpatched vulnerability can lead to massive data loss, financial damage, and reputational harm. With every new device or service going online, our exposure to cyber threats increases exponentially.</p>
@@ -267,16 +269,16 @@ export default function Home() {
         {/* Slide 3 - Global Impact */}
         <div 
           ref={(el) => { slideRefs.current[3] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
-          style={{ paddingTop: '100px', paddingBottom: '40px' }}
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(80px, 12vh, 120px)', paddingBottom: 'clamp(20px, 5vh, 50px)' }}
         >
           <div className="max-w-5xl w-full">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 rounded-xl border border-white/10">Global Impact of Cybercrime</h1>
-            <div className="text-sm sm:text-base text-gray-300 space-y-2 sm:space-y-3 backdrop-blur-lg bg-black/30 p-4 sm:p-5 rounded-xl border border-white/10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-xl border border-white/10">Global Impact of Cybercrime</h1>
+            <div className="text-xs sm:text-sm md:text-base text-gray-300 space-y-2 sm:space-y-3 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-xl border border-white/10">
               <p>Cybercrime is now one of the world's fastest-growing industries — projected to cause damages of over <span className="text-purple-400 font-bold">$10.5 trillion per year by 2025</span>.</p>
               
               {/* Global Cyber Risk Chart Image */}
-              <div className="my-3 backdrop-blur-lg bg-black/30 p-4 rounded-xl border border-white/10">
+              <div className="my-3 backdrop-blur-lg bg-black/30 p-2 sm:p-4 rounded-xl border border-white/10">
                 <div className="flex justify-center items-center">
                   <div className="relative w-full max-w-4xl">
                     <Image 
@@ -285,7 +287,8 @@ export default function Home() {
                       width={1200}
                       height={800}
                       className="max-w-full h-auto rounded-lg shadow-xl"
-                      style={{ maxHeight: '70vh', objectFit: 'contain' }}
+                      style={{ maxHeight: '60vh', objectFit: 'contain' }}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                       priority
                       unoptimized
                     />
@@ -303,20 +306,20 @@ export default function Home() {
         {/* Slide 4 - Pakistan Digital */}
         <div 
           ref={(el) => { slideRefs.current[4] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
-          style={{ paddingTop: '100px', paddingBottom: '40px' }}
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(80px, 12vh, 120px)', paddingBottom: 'clamp(20px, 5vh, 50px)' }}
         >
           <div className="max-w-5xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-5 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">Pakistan Going Digital – But At What Cost?</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">
-              <p className="text-base sm:text-lg">Pakistan has <span className="text-purple-400 font-bold">110M+ internet users</span> and <span className="text-purple-400 font-bold">64% of businesses</span> online, but cybersecurity awareness lags behind.</p>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-5 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Pakistan Going Digital – But At What Cost?</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
+              <p className="text-sm sm:text-base md:text-lg">Pakistan has <span className="text-purple-400 font-bold">110M+ internet users</span> and <span className="text-purple-400 font-bold">64% of businesses</span> online, but cybersecurity awareness lags behind.</p>
               
               {/* Charts Container - Side by Side */}
-              <div className="my-4 backdrop-blur-lg bg-black/30 p-4 rounded-xl border border-white/10">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+              <div className="my-4 backdrop-blur-lg bg-black/30 p-2 sm:p-4 rounded-xl border border-white/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 items-stretch">
                   {/* Growth Index Chart */}
                   <div className="w-full flex justify-center items-center">
-                    <div className="relative w-full" style={{ height: '450px', minHeight: '450px' }}>
+                    <div className="relative w-full" style={{ height: 'clamp(250px, 40vh, 450px)', minHeight: '250px' }}>
                       <Image 
                         src="/growthindex.jpeg" 
                         alt="Pakistan Digital Adoption Growth Index (2020-2025)" 
@@ -331,7 +334,7 @@ export default function Home() {
                   
                   {/* Pakistan Cyber Risk Chart */}
                   <div className="w-full flex justify-center items-center">
-                    <div className="relative w-full" style={{ height: '450px', minHeight: '450px' }}>
+                    <div className="relative w-full" style={{ height: 'clamp(250px, 40vh, 450px)', minHeight: '250px' }}>
                       <Image 
                         src="/pakistan.png" 
                         alt="Pakistan Estimated Annual Cyber Monetary Risk (2020-2025)" 
@@ -346,9 +349,9 @@ export default function Home() {
                 </div>
               </div>
               
-              <p className="text-base sm:text-lg">Recent incidents: BankIslami cyber heist (Rs 2.6 crore loss), FBR hack (2021), 22+ government websites defaced (2023).</p>
-              <p className="text-base sm:text-lg text-white font-semibold">Under the <span className="text-purple-400 font-bold">PECA Act</span>, security testing without permission is illegal, preventing ethical hackers from reporting vulnerabilities.</p>
-              <p className="text-sm sm:text-base">No official vulnerability disclosure channel exists — companies remain vulnerable, researchers remain silent.</p>
+              <p className="text-sm sm:text-base md:text-lg">Recent incidents: BankIslami cyber heist (Rs 2.6 crore loss), FBR hack (2021), 22+ government websites defaced (2023).</p>
+              <p className="text-sm sm:text-base md:text-lg text-white font-semibold">Under the <span className="text-purple-400 font-bold">PECA Act</span>, security testing without permission is illegal, preventing ethical hackers from reporting vulnerabilities.</p>
+              <p className="text-xs sm:text-sm md:text-base">No official vulnerability disclosure channel exists — companies remain vulnerable, researchers remain silent.</p>
             </div>
           </div>
         </div>
@@ -356,23 +359,24 @@ export default function Home() {
         {/* Slide 5 - Server Takeover */}
         <div 
           ref={(el) => { slideRefs.current[5] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
-          style={{ paddingTop: '100px', paddingBottom: '40px' }}
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(80px, 12vh, 120px)', paddingBottom: 'clamp(20px, 5vh, 50px)' }}
         >
           <div className="max-w-5xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">Server Takeover – Live Demo Preview</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Server Takeover – Live Demo Preview</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>This short demo video demonstrates how easily an unsecured server can be compromised. Using nothing more than misconfigured SSH credentials or an exposed port, an attacker can gain full control of a company's data within seconds.</p>
               
               {/* Video Container */}
-              <div className="my-4 backdrop-blur-lg bg-black/30 p-4 rounded-xl border border-white/10">
+              <div className="my-4 backdrop-blur-lg bg-black/30 p-2 sm:p-4 rounded-xl border border-white/10">
                 <div className="flex justify-center items-center">
                   <div className="relative w-full max-w-4xl">
                     <video 
                       controls
                       className="w-full h-auto rounded-lg shadow-xl"
-                      style={{ maxHeight: '70vh' }}
+                      style={{ maxHeight: 'clamp(250px, 60vh, 600px)' }}
                       preload="metadata"
+                      playsInline
                     >
                       <source src="/pakgov-server-takedown.mp4" type="video/mp4" />
                       Your browser does not support the video tag.
@@ -390,50 +394,51 @@ export default function Home() {
         {/* Slide 6 - Comparative Analysis */}
         <div 
           ref={(el) => { slideRefs.current[6] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-5xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Comparative Analysis – Global Bug Bounty Platforms</h1>
-            <div className="overflow-x-auto backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
-              <table className="w-full text-left border-collapse">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Comparative Analysis – Global Bug Bounty Platforms</h1>
+            <div className="overflow-x-auto backdrop-blur-lg bg-black/30 p-3 sm:p-6 rounded-xl border border-white/10">
+              <table className="w-full text-left border-collapse min-w-[800px]">
                 <thead>
                   <tr className="border-b border-purple-500/50">
-                    <th className="p-2 sm:p-4 text-white font-semibold text-sm sm:text-base">Platform</th>
-                    <th className="p-2 sm:p-4 text-white font-semibold text-sm sm:text-base">Country</th>
-                    <th className="p-2 sm:p-4 text-white font-semibold text-sm sm:text-base">Challenges for Pakistani Users</th>
-                    <th className="p-2 sm:p-4 text-white font-semibold text-sm sm:text-base">Summary</th>
+                    <th className="p-2 sm:p-3 md:p-4 text-white font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">Platform</th>
+                    <th className="p-2 sm:p-3 md:p-4 text-white font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">Country</th>
+                    <th className="p-2 sm:p-3 md:p-4 text-white font-semibold text-xs sm:text-sm md:text-base">Challenges for Pakistani Users</th>
+                    <th className="p-2 sm:p-3 md:p-4 text-white font-semibold text-xs sm:text-sm md:text-base">Summary</th>
                   </tr>
                 </thead>
                 <tbody className="text-gray-300">
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-4 font-semibold text-purple-400 text-sm sm:text-base">HackerOne</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">USA</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Requires international bank or PayPal; 30–40% reward loss due to dual taxation. High competition causes duplicate reports.</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Excellent global scope but inaccessible to Pakistani researchers.</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">HackerOne</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">USA</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Requires international bank or PayPal; 30–40% reward loss due to dual taxation. High competition causes duplicate reports.</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Excellent global scope but inaccessible to Pakistani researchers.</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-4 font-semibold text-purple-400 text-sm sm:text-base">Bugcrowd</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">USA</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Demands legal agreements under US law; limited inclusion of Pakistan-based companies; foreign payouts only.</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Complex onboarding and unsuitable for local financial systems.</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Bugcrowd</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">USA</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Demands legal agreements under US law; limited inclusion of Pakistan-based companies; foreign payouts only.</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Complex onboarding and unsuitable for local financial systems.</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-4 font-semibold text-purple-400 text-sm sm:text-base">Intigriti</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Belgium</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Euro-only payments; no Pakistani programs; not compliant with local laws.</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Great European platform, but geographically restrictive.</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Intigriti</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">Belgium</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Euro-only payments; no Pakistani programs; not compliant with local laws.</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Great European platform, but geographically restrictive.</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-4 font-semibold text-purple-400 text-sm sm:text-base">Synack</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">USA</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Invite-only; focused on Western clients; requires background verification and NDAs.</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Designed for elite researchers, not local contributors.</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Synack</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">USA</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Invite-only; focused on Western clients; requires background verification and NDAs.</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Designed for elite researchers, not local contributors.</td>
                   </tr>
                   <tr className="border-b border-gray-700 bg-purple-900/20">
-                    <td className="p-2 sm:p-4 font-semibold text-purple-300 text-sm sm:text-base">PBBP (Proposed)</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Pakistan</td>
-                    <td className="p-2 sm:p-4 text-sm sm:text-base">Legally safe under PECA; direct local payouts via JazzCash, Easypaisa, or Bank; smaller community reduces duplicates.</td>
-                    <td className="p-2 sm:p-4 font-semibold text-purple-300 text-sm sm:text-base">First legal, local, and secure bridge for Pakistani cybersecurity.</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-300 text-xs sm:text-sm md:text-base whitespace-nowrap">PBBP (Proposed)</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">Pakistan</td>
+                    <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Legally safe under PECA; direct local payouts via JazzCash, Easypaisa, or Bank; smaller community reduces duplicates.</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-300 text-xs sm:text-sm md:text-base break-words">First legal, local, and secure bridge for Pakistani cybersecurity.</td>
                   </tr>
                 </tbody>
               </table>
@@ -444,11 +449,12 @@ export default function Home() {
         {/* Slide 7 - Our Solution */}
         <div 
           ref={(el) => { slideRefs.current[7] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Our Solution – Pakistan Bug Bounty Platform (PBBP)</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Our Solution – Pakistan Bug Bounty Platform (PBBP)</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>Our proposed solution is Pakistan's first national-level bug bounty platform, designed specifically to meet the country's cybersecurity and legal needs.</p>
               <p>PBBP serves as a secure bridge between organizations and ethical hackers, allowing approved vulnerability testing, structured reporting, and legal payouts — all under the framework of the PECA Act.</p>
               <p>The platform will help companies create bounty programs, researchers submit vulnerabilities, and triagers verify and prioritize issues. It promotes cybersecurity awareness, builds trust, and ensures that researchers can contribute legally and safely.</p>
@@ -472,11 +478,12 @@ export default function Home() {
         {/* Slide 8 - Module Flow */}
         <div 
           ref={(el) => { slideRefs.current[8] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Module Flow / System Workflow</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-4 sm:space-y-6 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Module Flow / System Workflow</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-3 sm:space-y-4 md:space-y-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>The Pakistan Bug Bounty Platform operates through a streamlined process that ensures clarity, legality, and security for all participants:</p>
               <ol className="list-decimal list-inside space-y-3 sm:space-y-4 ml-4">
                 <li className="text-base sm:text-lg">
@@ -503,21 +510,23 @@ export default function Home() {
         {/* Slide 9 - System Architecture */}
         <div 
           ref={(el) => { slideRefs.current[9] = el; }}
-          className="flex items-center justify-center min-h-screen px-2 sm:px-4 md:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-2 sm:px-4 md:px-6 lg:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="w-full max-w-7xl mx-auto py-4 sm:py-8">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 text-center backdrop-blur-lg bg-black/30 p-4 sm:p-6 rounded-xl border border-white/10">System Architecture Diagram</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 text-center backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-6 rounded-xl border border-white/10">System Architecture Diagram</h1>
             
             {/* Architecture Diagram Image */}
-            <div className="flex justify-center items-center mt-6 sm:mt-8">
-              <div className="relative w-full max-w-6xl backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl p-4" style={{ minHeight: '400px' }}>
+            <div className="flex justify-center items-center mt-4 sm:mt-6 md:mt-8">
+              <div className="relative w-full max-w-6xl backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl p-2 sm:p-4" style={{ minHeight: 'clamp(300px, 50vh, 500px)' }}>
                 <Image 
                   src="/systemArch.jpeg" 
                   alt="System Architecture Diagram" 
                   width={1200}
                   height={800}
                   className="max-w-full h-auto rounded-xl shadow-2xl"
-                  style={{ maxHeight: '80vh', objectFit: 'contain' }}
+                  style={{ maxHeight: 'clamp(300px, 70vh, 800px)', objectFit: 'contain' }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 95vw, 1200px"
                   priority
                   unoptimized
                 />
@@ -529,11 +538,12 @@ export default function Home() {
         {/* Slide 10 - Our Team */}
         <div 
           ref={(el) => { slideRefs.current[10] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Why We Are the Right Team</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Why We Are the Right Team</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>Our team deeply understands both the technical challenges and the legal limitations surrounding cybersecurity in Pakistan.</p>
               <p>We bring together expertise in:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -550,11 +560,12 @@ export default function Home() {
         {/* Slide 11 - Conclusion */}
         <div 
           ref={(el) => { slideRefs.current[11] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-4xl w-full text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Conclusion</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-4 sm:space-y-6 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Conclusion</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-3 sm:space-y-4 md:space-y-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>Pakistan is rapidly digitizing, but its cybersecurity measures have not caught up. There is no legal or official system where ethical hackers can report vulnerabilities responsibly, and global platforms are inaccessible due to legal and financial barriers.</p>
               <p>Our proposed Pakistan Bug Bounty Platform provides a localized, secure, and legally compliant environment where organizations can collaborate with researchers to strengthen their defenses.</p>
               <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">This platform promotes security awareness, legal cooperation, and national resilience in cyberspace.</p>
