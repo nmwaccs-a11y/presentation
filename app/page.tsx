@@ -506,7 +506,7 @@ export default function Home() {
           className="flex items-center justify-center min-h-screen px-2 sm:px-4 md:px-8 snap-start snap-always"
         >
           <div className="w-full max-w-7xl mx-auto py-4 sm:py-8">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 text-center backdrop-blur-lg bg-black/30 p-4 sm:p-6 rounded-xl border border-white/10">System Architecture</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 text-center backdrop-blur-lg bg-black/30 p-4 sm:p-6 rounded-xl border border-white/10">System Architecture Diagram</h1>
             
             {/* Architecture Diagram Image */}
             <div className="flex justify-center items-center mt-6 sm:mt-8">
