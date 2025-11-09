@@ -1,7 +1,8 @@
 'use client';
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
-import PillNav from "@/components/PillNav";
+import GlassNavbar from "@/components/GlassNavbar";
 
 const ColorBends = dynamic(() => import("@/components/ColorBends"), {
   ssr: false,
@@ -168,25 +169,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* PillNav Navigation Bar */}
-      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100 }}>
-        <PillNav
-          logo={null}
-          items={navItems}
-          activeIndex={currentSlide}
-          onItemClick={handleNavClick}
-          baseColor="#000000"
-          pillColor="#ffffff"
-          hoveredPillTextColor="#ffffff"
-          pillTextColor="#000000"
-          onMobileMenuClick={() => {}}
-          className=""
-        />
-      </div>
+      {/* Glass Navigation Bar */}
+      <GlassNavbar items={navItems} activeIndex={currentSlide} onItemClick={handleNavClick} />
 
       {/* Slide Content - Single Page Scroll */}
       <div 
         ref={containerRef}
+        data-scroll-container
         className="relative overflow-y-auto overflow-x-hidden h-screen snap-y snap-mandatory scroll-smooth"
         style={{ scrollBehavior: 'smooth', zIndex: 10, position: 'relative' }}
       >
@@ -279,11 +268,31 @@ export default function Home() {
         <div 
           ref={(el) => { slideRefs.current[3] = el; }}
           className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          style={{ paddingTop: '100px', paddingBottom: '40px' }}
         >
-          <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Global Impact of Cybercrime</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+          <div className="max-w-5xl w-full">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 sm:mb-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 rounded-xl border border-white/10">Global Impact of Cybercrime</h1>
+            <div className="text-sm sm:text-base text-gray-300 space-y-2 sm:space-y-3 backdrop-blur-lg bg-black/30 p-4 sm:p-5 rounded-xl border border-white/10">
               <p>Cybercrime is now one of the world's fastest-growing industries — projected to cause damages of over <span className="text-purple-400 font-bold">$10.5 trillion per year by 2025</span>.</p>
+              
+              {/* Global Cyber Risk Chart Image */}
+              <div className="my-3 backdrop-blur-lg bg-black/30 p-4 rounded-xl border border-white/10">
+                <div className="flex justify-center items-center">
+                  <div className="relative w-full max-w-4xl">
+                    <Image 
+                      src="/global.png" 
+                      alt="Global Cyber Risk: Cost vs. Frequency Escalation (2020-2025)" 
+                      width={1200}
+                      height={800}
+                      className="max-w-full h-auto rounded-lg shadow-xl"
+                      style={{ maxHeight: '70vh', objectFit: 'contain' }}
+                      priority
+                      unoptimized
+                    />
+                  </div>
+                </div>
+              </div>
+              
               <p>According to IBM's 2024 Security Report, <span className="text-purple-400 font-bold">64% of organizations worldwide</span> have experienced some form of cyber attack, with the average cost of a data breach reaching <span className="text-purple-400 font-bold">$4.45 million</span>.</p>
               <p>Major incidents such as the WannaCry ransomware attack, Equifax data breach, and Yahoo leak demonstrate how a single vulnerability can disrupt millions of users and destroy company reputation.</p>
               <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">These statistics reveal a harsh truth — <span className="text-purple-400 font-bold">cybersecurity is not a luxury; it is an absolute necessity</span>.</p>
@@ -295,93 +304,51 @@ export default function Home() {
         <div 
           ref={(el) => { slideRefs.current[4] = el; }}
           className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          style={{ paddingTop: '100px', paddingBottom: '40px' }}
         >
-          <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Pakistan Going Digital – But At What Cost?</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
-              <p>Pakistan is experiencing a rapid digital transformation, with over <span className="text-purple-400 font-bold">110 million internet users</span> and more than <span className="text-purple-400 font-bold">64% of businesses</span> moving their operations online. However, cybersecurity awareness has not evolved at the same pace.</p>
+          <div className="max-w-5xl w-full">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-5 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">Pakistan Going Digital – But At What Cost?</h1>
+            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">
+              <p className="text-base sm:text-lg">Pakistan has <span className="text-purple-400 font-bold">110M+ internet users</span> and <span className="text-purple-400 font-bold">64% of businesses</span> online, but cybersecurity awareness lags behind.</p>
               
-              {/* Digital Growth Bar Chart */}
-              <div className="my-6 backdrop-blur-lg bg-black/30 p-4 rounded-xl border border-white/10">
-                <h2 className="text-lg font-bold text-white mb-3 text-center">Digital Adoption Growth (2020-2025)</h2>
-                
-                {/* Simple bar chart with capped widths */}
-                <div className="space-y-2">
-                  {/* 2020 */}
-                  <div className="flex items-center">
-                    <span className="text-gray-300 text-xs w-8">2020</span>
-                    <div className="flex-1 ml-2">
-                      <div className="h-6 bg-purple-500 rounded" 
-                           style={{ width: '40%' }}>
-                        <span className="text-white text-xs pl-2">100</span>
-                      </div>
+              {/* Charts Container - Side by Side */}
+              <div className="my-4 backdrop-blur-lg bg-black/30 p-4 rounded-xl border border-white/10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+                  {/* Growth Index Chart */}
+                  <div className="w-full flex justify-center items-center">
+                    <div className="relative w-full" style={{ height: '450px', minHeight: '450px' }}>
+                      <Image 
+                        src="/growthindex.jpeg" 
+                        alt="Pakistan Digital Adoption Growth Index (2020-2025)" 
+                        fill
+                        className="object-contain rounded-lg shadow-xl"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority
+                        unoptimized
+                      />
                     </div>
                   </div>
                   
-                  {/* 2021 */}
-                  <div className="flex items-center">
-                    <span className="text-gray-300 text-xs w-8">2021</span>
-                    <div className="flex-1 ml-2">
-                      <div className="h-6 bg-blue-500 rounded" 
-                           style={{ width: '52%' }}>
-                        <span className="text-white text-xs pl-2">130</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* 2022 */}
-                  <div className="flex items-center">
-                    <span className="text-gray-300 text-xs w-8">2022</span>
-                    <div className="flex-1 ml-2">
-                      <div className="h-6 bg-green-500 rounded" 
-                           style={{ width: '66%' }}>
-                        <span className="text-white text-xs pl-2">165</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* 2023 */}
-                  <div className="flex items-center">
-                    <span className="text-gray-300 text-xs w-8">2023</span>
-                    <div className="flex-1 ml-2">
-                      <div className="h-6 bg-yellow-500 rounded" 
-                           style={{ width: '86%' }}>
-                        <span className="text-white text-xs pl-2">215</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* 2024 */}
-                  <div className="flex items-center">
-                    <span className="text-gray-300 text-xs w-8">2024</span>
-                    <div className="flex-1 ml-2">
-                      <div className="h-6 bg-orange-500 rounded" 
-                           style={{ width: '98%' }}>
-                        <span className="text-white text-xs pl-2">245</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* 2025 */}
-                  <div className="flex items-center">
-                    <span className="text-gray-300 text-xs w-8">2025</span>
-                    <div className="flex-1 ml-2">
-                      <div className="h-6 bg-red-500 rounded" 
-                           style={{ width: '100%' }}>
-                        <span className="text-white text-xs pl-2">275</span>
-                      </div>
+                  {/* Pakistan Cyber Risk Chart */}
+                  <div className="w-full flex justify-center items-center">
+                    <div className="relative w-full" style={{ height: '450px', minHeight: '450px' }}>
+                      <Image 
+                        src="/pakistan.png" 
+                        alt="Pakistan Estimated Annual Cyber Monetary Risk (2020-2025)" 
+                        fill
+                        className="object-contain rounded-lg shadow-xl"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority
+                        unoptimized
+                      />
                     </div>
                   </div>
                 </div>
-                
-                <p className="text-gray-400 text-xs text-center mt-3 italic">
-                  Digital Adoption Index (2020 = 100)
-                </p>
               </div>
               
-              <p>Recent incidents such as the BankIslami cyber heist (loss of Rs 2.6 crore), the FBR website hack in 2021, and the defacement of 22+ government websites in 2023, reveal how unprepared we are against modern threats.</p>
-              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">A deeper issue lies within our legal framework. Under the <span className="text-purple-400 font-bold">PECA Act</span>, conducting any security testing on an organization without permission is considered illegal. This means even well-intentioned researchers cannot legally report vulnerabilities they discover.</p>
-              <p>The absence of an official vulnerability disclosure channel has created a dangerous gap — companies remain vulnerable, and ethical hackers remain silent.</p>
+              <p className="text-base sm:text-lg">Recent incidents: BankIslami cyber heist (Rs 2.6 crore loss), FBR hack (2021), 22+ government websites defaced (2023).</p>
+              <p className="text-base sm:text-lg text-white font-semibold">Under the <span className="text-purple-400 font-bold">PECA Act</span>, security testing without permission is illegal, preventing ethical hackers from reporting vulnerabilities.</p>
+              <p className="text-sm sm:text-base">No official vulnerability disclosure channel exists — companies remain vulnerable, researchers remain silent.</p>
             </div>
           </div>
         </div>
@@ -390,11 +357,30 @@ export default function Home() {
         <div 
           ref={(el) => { slideRefs.current[5] = el; }}
           className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          style={{ paddingTop: '100px', paddingBottom: '40px' }}
         >
-          <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">Server Takeover – Live Demo Preview</h1>
-            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">
+          <div className="max-w-5xl w-full">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">Server Takeover – Live Demo Preview</h1>
+            <div className="text-base sm:text-lg text-gray-300 space-y-3 sm:space-y-4 backdrop-blur-lg bg-black/30 p-5 sm:p-6 rounded-xl border border-white/10">
               <p>This short demo video demonstrates how easily an unsecured server can be compromised. Using nothing more than misconfigured SSH credentials or an exposed port, an attacker can gain full control of a company's data within seconds.</p>
+              
+              {/* Video Container */}
+              <div className="my-4 backdrop-blur-lg bg-black/30 p-4 rounded-xl border border-white/10">
+                <div className="flex justify-center items-center">
+                  <div className="relative w-full max-w-4xl">
+                    <video 
+                      controls
+                      className="w-full h-auto rounded-lg shadow-xl"
+                      style={{ maxHeight: '70vh' }}
+                      preload="metadata"
+                    >
+                      <source src="/pakgov-server-takedown.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+              
               <p>The purpose of this demo is not to glorify hacking but to highlight the real and immediate risk faced by Pakistani organizations that ignore cybersecurity practices.</p>
               <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">By visualizing this attack, we aim to show our panel that the danger is not theoretical — <span className="text-purple-400 font-bold">it is happening every day in our local digital space</span>.</p>
             </div>
@@ -517,42 +503,26 @@ export default function Home() {
         {/* Slide 9 - System Architecture */}
         <div 
           ref={(el) => { slideRefs.current[9] = el; }}
-          className="flex items-center justify-center min-h-screen px-4 sm:px-8 snap-start snap-always"
+          className="flex items-center justify-center min-h-screen px-2 sm:px-4 md:px-8 snap-start snap-always"
         >
-          <div className="max-w-4xl w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-8 text-center backdrop-blur-lg bg-black/30 p-6 rounded-xl border border-white/10">System Architecture</h1>
-            <p className="text-base sm:text-lg text-gray-300 text-center mb-6 sm:mb-8 backdrop-blur-lg bg-black/30 p-4 rounded-lg border border-white/10">
-              The Pakistan Bug Bounty Platform is built with a modular and secure architecture:
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
-              <div className="p-4 sm:p-6 rounded-lg border border-purple-500/30 bg-purple-900/20 backdrop-blur-lg">
-                <h3 className="text-xl sm:text-2xl font-semibold text-purple-400 mb-2">Frontend</h3>
-                <p className="text-gray-300 text-sm sm:text-base">React or Next.js for user dashboards</p>
-              </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-green-500/30 bg-green-900/20 backdrop-blur-lg">
-                <h3 className="text-xl sm:text-2xl font-semibold text-green-400 mb-2">Backend</h3>
-                <p className="text-gray-300 text-sm sm:text-base">Node.js and Express for APIs and logic</p>
-              </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-yellow-500/30 bg-yellow-900/20 backdrop-blur-lg">
-                <h3 className="text-xl sm:text-2xl font-semibold text-yellow-400 mb-2">Database</h3>
-                <p className="text-gray-300 text-sm sm:text-base">MongoDB or MySQL for secure data storage</p>
-              </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-red-500/30 bg-red-900/20 backdrop-blur-lg">
-                <h3 className="text-xl sm:text-2xl font-semibold text-red-400 mb-2">Security</h3>
-                <p className="text-gray-300 text-sm sm:text-base">JWT tokens, password hashing, and two-factor authentication</p>
-              </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-purple-500/30 bg-purple-900/20 backdrop-blur-lg">
-                <h3 className="text-xl sm:text-2xl font-semibold text-purple-400 mb-2">Notifications</h3>
-                <p className="text-gray-300 text-sm sm:text-base">Email and in-app alerts</p>
-              </div>
-              <div className="p-4 sm:p-6 rounded-lg border border-cyan-500/30 bg-cyan-900/20 backdrop-blur-lg">
-                <h3 className="text-xl sm:text-2xl font-semibold text-cyan-400 mb-2">Hosting</h3>
-                <p className="text-gray-300 text-sm sm:text-base">AWS or local servers for scalability and uptime</p>
+          <div className="w-full max-w-7xl mx-auto py-4 sm:py-8">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 text-center backdrop-blur-lg bg-black/30 p-4 sm:p-6 rounded-xl border border-white/10">System Architecture</h1>
+            
+            {/* Architecture Diagram Image */}
+            <div className="flex justify-center items-center mt-6 sm:mt-8">
+              <div className="relative w-full max-w-6xl backdrop-blur-lg bg-black/30 border border-white/10 rounded-xl p-4" style={{ minHeight: '400px' }}>
+                <Image 
+                  src="/systemArch.jpeg" 
+                  alt="System Architecture Diagram" 
+                  width={1200}
+                  height={800}
+                  className="max-w-full h-auto rounded-xl shadow-2xl"
+                  style={{ maxHeight: '80vh', objectFit: 'contain' }}
+                  priority
+                  unoptimized
+                />
               </div>
             </div>
-            <p className="text-lg sm:text-xl text-white mt-6 sm:mt-8 text-center backdrop-blur-lg bg-black/30 p-4 rounded-lg border border-white/10">
-              This layered structure ensures that the platform remains robust, scalable, and protected against modern threats.
-            </p>
           </div>
         </div>
 
