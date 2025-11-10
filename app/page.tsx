@@ -186,12 +186,6 @@ export default function Home() {
           style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="text-center max-w-4xl w-full">
-            {/* Deployment Verification Text */}
-            <div className="mb-4 backdrop-blur-lg bg-green-500/20 border border-green-400/30 rounded-lg p-2 sm:p-3">
-              <p className="text-green-300 text-sm sm:text-base font-semibold">
-                ✅ Deployment Status: Latest changes deployed successfully on GitHub & Vercel
-              </p>
-            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               Pakistan Bug Bounty Platform (PBBP)
             </h1>
