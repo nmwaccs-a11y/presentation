@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pakistan Bug Bounty Platform (PBBP) - Presentation",
+  title: "ReconX - Presentation",
   description: "A Secure Bridge Between Organizations and Ethical Hackers",
 };
 

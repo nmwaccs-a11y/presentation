@@ -16,7 +16,7 @@ const slides = [
   { id: 4, title: "Pakistan Digital", name: "Pakistan Going Digital – But At What Cost?" },
   { id: 5, title: "Server Takeover", name: "Server Takeover: Live Demo Preview" },
   { id: 6, title: "Comparative Analysis", name: "Comparative Analysis of Global Platforms" },
-  { id: 7, title: "Our Solution", name: "Our Solution – Pakistan Bug Bounty Platform" },
+  { id: 7, title: "Our Solution", name: "Our Solution – ReconX" },
   { id: 8, title: "Module Flow", name: "Module Flow & Workflow" },
   { id: 9, title: "System Architecture", name: "System Architecture" },
   { id: 10, title: "Our Team", name: "Why We Are the Right Team" },
@@ -187,7 +187,7 @@ export default function Home() {
         >
           <div className="text-center max-w-4xl w-full">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
-              Pakistan Bug Bounty Platform (PBBP)
+              ReconX
             </h1>
             <h2 className="text-xl sm:text-2xl md:text-3xl text-purple-300 mb-6 sm:mb-8 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-lg border border-white/10">
               A Secure Bridge Between Organizations and Ethical Hackers
@@ -456,7 +456,7 @@ export default function Home() {
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Designed for elite researchers, not local contributors.</td>
                   </tr>
                   <tr className="border-b border-gray-700 bg-purple-900/20">
-                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-300 text-xs sm:text-sm md:text-base whitespace-nowrap">PBBP (Proposed)</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-300 text-xs sm:text-sm md:text-base whitespace-nowrap">ReconX (Proposed)</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">Pakistan</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Legally safe under PECA; direct local payouts via JazzCash, Easypaisa, or Bank; smaller community reduces duplicates.</td>
                     <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-300 text-xs sm:text-sm md:text-base break-words">First legal, local, and secure bridge for Pakistani cybersecurity.</td>
@@ -474,10 +474,10 @@ export default function Home() {
           style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
           <div className="max-w-4xl w-full">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Our Solution – Pakistan Bug Bounty Platform (PBBP)</h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Our Solution – ReconX</h1>
             <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>Our proposed solution is Pakistan's first national-level bug bounty platform, designed specifically to meet the country's cybersecurity and legal needs.</p>
-              <p>PBBP serves as a secure bridge between organizations and ethical hackers, allowing approved vulnerability testing, structured reporting, and legal payouts — all under the framework of the PECA Act.</p>
+              <p>ReconX serves as a secure bridge between organizations and ethical hackers, allowing approved vulnerability testing, structured reporting, and legal payouts — all under the framework of the PECA Act.</p>
               <p>The platform will help companies create bounty programs, researchers submit vulnerabilities, and triagers verify and prioritize issues. It promotes cybersecurity awareness, builds trust, and ensures that researchers can contribute legally and safely.</p>
               <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-purple-900/20 rounded-lg border border-purple-500/30">
                 <p className="text-white font-semibold mb-2">Core capabilities include:</p>
@@ -505,7 +505,7 @@ export default function Home() {
           <div className="max-w-4xl w-full">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Module Flow / System Workflow</h1>
             <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-3 sm:space-y-4 md:space-y-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
-              <p>The Pakistan Bug Bounty Platform operates through a streamlined process that ensures clarity, legality, and security for all participants:</p>
+              <p>ReconX operates through a streamlined process that ensures clarity, legality, and security for all participants:</p>
               <ol className="list-decimal list-inside space-y-3 sm:space-y-4 ml-4">
                 <li className="text-base sm:text-lg">
                   <span className="font-semibold text-white">A company registers</span> on the platform and creates a bounty program outlining its security scope and rules.
@@ -588,7 +588,7 @@ export default function Home() {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Conclusion</h1>
             <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-3 sm:space-y-4 md:space-y-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               <p>Pakistan is rapidly digitizing, but its cybersecurity measures have not caught up. There is no legal or official system where ethical hackers can report vulnerabilities responsibly, and global platforms are inaccessible due to legal and financial barriers.</p>
-              <p>Our proposed Pakistan Bug Bounty Platform provides a localized, secure, and legally compliant environment where organizations can collaborate with researchers to strengthen their defenses.</p>
+              <p>Our proposed ReconX provides a localized, secure, and legally compliant environment where organizations can collaborate with researchers to strengthen their defenses.</p>
               <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">This platform promotes security awareness, legal cooperation, and national resilience in cyberspace.</p>
               <div className="mt-6 sm:mt-12 p-4 sm:p-8 bg-purple-900/20 rounded-lg border border-purple-500/30 backdrop-blur-lg">
                 <p className="text-lg sm:text-xl text-purple-300 font-semibold italic">
