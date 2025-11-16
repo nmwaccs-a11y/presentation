@@ -199,7 +199,7 @@ export default function Home() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
               ReconX
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-purple-300 mb-6 sm:mb-8 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-lg border border-white/10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-blue-400 mb-6 sm:mb-8 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-lg border border-white/10">
               A Secure Bridge Between Organizations and Ethical Hackers
             </h2>
             {/* Table for presenter information with glass blur effect */}
@@ -268,9 +268,9 @@ export default function Home() {
                     <tr 
                       key={slide.id}
                       onClick={() => scrollToSlide(index + 2)}
-                      className="border-b border-white/10 hover:bg-purple-900/20 cursor-pointer transition-all duration-300"
+                      className="border-b border-white/10 hover:bg-blue-900/20 cursor-pointer transition-all duration-300"
                     >
-                      <td className="p-2 sm:p-4 text-purple-400 font-bold text-xs sm:text-base">{slide.id}.</td>
+                      <td className="p-2 sm:p-4 text-blue-400 font-bold text-xs sm:text-base">{slide.id}.</td>
                       <td className="p-2 sm:p-4 text-white font-medium text-xs sm:text-base">{slide.title}</td>
                       <td className="p-2 sm:p-4 text-gray-300 text-xs sm:text-base">{slide.name}</td>
                     </tr>
@@ -306,7 +306,7 @@ export default function Home() {
           <div className="max-w-5xl w-full">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-xl border border-white/10">Global Impact of Cybercrime</h1>
             <div className="text-xs sm:text-sm md:text-base text-gray-300 space-y-2 sm:space-y-3 backdrop-blur-lg bg-black/30 p-3 sm:p-4 md:p-5 rounded-xl border border-white/10">
-              <p>Cybercrime is now one of the world's fastest-growing industries — projected to cause damages of over <span className="text-purple-400 font-bold">$10.5 trillion per year by 2025</span>.</p>
+              <p>Cybercrime is now one of the world's fastest-growing industries — projected to cause damages of over <span className="text-blue-400 font-bold">$10.5 trillion per year by 2025</span>.</p>
               
               {/* Global Cyber Risk Chart Image */}
               <div className="my-3 backdrop-blur-lg bg-black/30 p-2 sm:p-4 rounded-xl border border-white/10">
@@ -328,9 +328,9 @@ export default function Home() {
                 </div>
               </div>
               
-              <p>According to IBM's 2024 Security Report, <span className="text-purple-400 font-bold">64% of organizations worldwide</span> have experienced some form of cyber attack, with the average cost of a data breach reaching <span className="text-purple-400 font-bold">$4.45 million</span>.</p>
+              <p>According to IBM's 2024 Security Report, <span className="text-blue-400 font-bold">64% of organizations worldwide</span> have experienced some form of cyber attack, with the average cost of a data breach reaching <span className="text-blue-400 font-bold">$4.45 million</span>.</p>
               <p>Major incidents such as the WannaCry ransomware attack, Equifax data breach, and Yahoo leak demonstrate how a single vulnerability can disrupt millions of users and destroy company reputation.</p>
-              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">These statistics reveal a harsh truth — <span className="text-purple-400 font-bold">cybersecurity is not a luxury; it is an absolute necessity</span>.</p>
+              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">These statistics reveal a harsh truth — <span className="text-blue-400 font-bold">cybersecurity is not a luxury; it is an absolute necessity</span>.</p>
             </div>
           </div>
         </div>
@@ -344,7 +344,7 @@ export default function Home() {
           <div className="max-w-5xl w-full">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-5 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Pakistan Going Digital – But At What Cost?</h1>
             <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
-              <p className="text-sm sm:text-base md:text-lg">Pakistan has <span className="text-purple-400 font-bold">110M+ internet users</span> and <span className="text-purple-400 font-bold">64% of businesses</span> online, but cybersecurity awareness lags behind.</p>
+              <p className="text-sm sm:text-base md:text-lg">Pakistan has <span className="text-blue-400 font-bold">110M+ internet users</span> and <span className="text-blue-400 font-bold">64% of businesses</span> online, but cybersecurity awareness lags behind.</p>
               
               {/* Charts Container - Side by Side */}
               <div className="my-4 backdrop-blur-lg bg-black/30 p-2 sm:p-4 rounded-xl border border-white/10">
@@ -384,7 +384,7 @@ export default function Home() {
               </div>
               
               <p className="text-sm sm:text-base md:text-lg">Recent incidents: BankIslami cyber heist (Rs 2.6 crore loss), FBR hack (2021), 22+ government websites defaced (2023).</p>
-              <p className="text-sm sm:text-base md:text-lg text-white font-semibold">Under the <span className="text-purple-400 font-bold">PECA Act</span>, security testing without permission is illegal, preventing ethical hackers from reporting vulnerabilities.</p>
+              <p className="text-sm sm:text-base md:text-lg text-white font-semibold">Under the <span className="text-blue-400 font-bold">PECA Act</span>, security testing without permission is illegal, preventing ethical hackers from reporting vulnerabilities.</p>
               <p className="text-xs sm:text-sm md:text-base">No official vulnerability disclosure channel exists — companies remain vulnerable, researchers remain silent.</p>
             </div>
           </div>
@@ -420,7 +420,7 @@ export default function Home() {
               </div>
               
               <p>The purpose of this demo is not to glorify hacking but to highlight the real and immediate risk faced by Pakistani organizations that ignore cybersecurity practices.</p>
-              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">By visualizing this attack, we aim to show our panel that the danger is not theoretical — <span className="text-purple-400 font-bold">it is happening every day in our local digital space</span>.</p>
+              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">By visualizing this attack, we aim to show our panel that the danger is not theoretical — <span className="text-blue-400 font-bold">it is happening every day in our local digital space</span>.</p>
             </div>
           </div>
         </div>
@@ -437,7 +437,7 @@ export default function Home() {
               <p>Our proposed solution is Pakistan's first national-level bug bounty platform, designed specifically to meet the country's cybersecurity and legal needs.</p>
               <p>ReconX serves as a secure bridge between organizations and ethical hackers, allowing approved vulnerability testing, structured reporting, and legal payouts — all under the framework of the PECA Act.</p>
               <p>The platform will help companies create bounty programs, researchers submit vulnerabilities, and triagers verify and prioritize issues. It promotes cybersecurity awareness, builds trust, and ensures that researchers can contribute legally and safely.</p>
-              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-purple-900/20 rounded-lg border border-purple-500/30">
+              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-900/20 rounded-lg border border-blue-500/30">
                 <p className="text-white font-semibold mb-2">Core capabilities include:</p>
                 <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm sm:text-base">
                   <li>Secure vulnerability submission portal</li>
@@ -449,7 +449,7 @@ export default function Home() {
                   <li>Local reward management</li>
                 </ul>
               </div>
-              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">In essence, this is not just a website — <span className="text-purple-400 font-bold">it is the foundation for a national cybersecurity ecosystem</span>.</p>
+              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">In essence, this is not just a website — <span className="text-blue-400 font-bold">it is the foundation for a national cybersecurity ecosystem</span>.</p>
             </div>
           </div>
         </div>
@@ -465,7 +465,7 @@ export default function Home() {
             <div className="overflow-x-auto backdrop-blur-lg bg-black/30 p-3 sm:p-6 rounded-xl border border-white/10">
               <table className="w-full text-left border-collapse min-w-[800px]">
                 <thead>
-                  <tr className="border-b border-purple-500/50">
+                  <tr className="border-b border-blue-500/50">
                     <th className="p-2 sm:p-3 md:p-4 text-white font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">Platform</th>
                     <th className="p-2 sm:p-3 md:p-4 text-white font-semibold text-xs sm:text-sm md:text-base whitespace-nowrap">Country</th>
                     <th className="p-2 sm:p-3 md:p-4 text-white font-semibold text-xs sm:text-sm md:text-base">Challenges for Pakistani Users</th>
@@ -474,34 +474,34 @@ export default function Home() {
                 </thead>
                 <tbody className="text-gray-300">
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">HackerOne</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-blue-400 text-xs sm:text-sm md:text-base whitespace-nowrap">HackerOne</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">USA</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Requires international bank or PayPal; 30–40% reward loss due to dual taxation. High competition causes duplicate reports.</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Excellent global scope but inaccessible to Pakistani researchers.</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Bugcrowd</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-blue-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Bugcrowd</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">USA</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Demands legal agreements under US law; limited inclusion of Pakistan-based companies; foreign payouts only.</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Complex onboarding and unsuitable for local financial systems.</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Intigriti</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-blue-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Intigriti</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">Belgium</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Euro-only payments; no Pakistani programs; not compliant with local laws.</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Great European platform, but geographically restrictive.</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Synack</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-blue-400 text-xs sm:text-sm md:text-base whitespace-nowrap">Synack</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">USA</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Invite-only; focused on Western clients; requires background verification and NDAs.</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Designed for elite researchers, not local contributors.</td>
                   </tr>
-                  <tr className="border-b border-gray-700 bg-purple-900/20">
-                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-300 text-xs sm:text-sm md:text-base whitespace-nowrap">ReconX (Proposed)</td>
+                  <tr className="border-b border-gray-700 bg-blue-900/20">
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-blue-400 text-xs sm:text-sm md:text-base whitespace-nowrap">ReconX (Proposed)</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base whitespace-nowrap">Pakistan</td>
                     <td className="p-2 sm:p-3 md:p-4 text-xs sm:text-sm md:text-base break-words">Legally safe under PECA; direct local payouts via JazzCash, Easypaisa, or Bank; smaller community reduces duplicates.</td>
-                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-purple-300 text-xs sm:text-sm md:text-base break-words">First legal, local, and secure bridge for Pakistani cybersecurity.</td>
+                    <td className="p-2 sm:p-3 md:p-4 font-semibold text-blue-400 text-xs sm:text-sm md:text-base break-words">First legal, local, and secure bridge for Pakistani cybersecurity.</td>
                   </tr>
                 </tbody>
               </table>
@@ -587,7 +587,7 @@ export default function Home() {
                 <li className="text-sm sm:text-base">Solid understanding of the PECA law governing ethical hacking</li>
               </ul>
               <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">Beyond technical skills, we are driven by purpose. We aim to create awareness among Pakistani organizations about proactive security and responsible vulnerability disclosure.</p>
-              <p className="text-lg sm:text-xl text-purple-300 font-semibold mt-4 sm:mt-6">This project is not just a final year requirement — it is a vision to create the country's first platform that protects both companies and researchers through cooperation and trust.</p>
+              <p className="text-lg sm:text-xl text-blue-400 font-semibold mt-4 sm:mt-6">This project is not just a final year requirement — it is a vision to create the country's first platform that protects both companies and researchers through cooperation and trust.</p>
             </div>
           </div>
         </div>
@@ -604,8 +604,8 @@ export default function Home() {
               <p>Pakistan is rapidly digitizing, but its cybersecurity measures have not caught up. There is no legal or official system where ethical hackers can report vulnerabilities responsibly, and global platforms are inaccessible due to legal and financial barriers.</p>
               <p>Our proposed ReconX provides a localized, secure, and legally compliant environment where organizations can collaborate with researchers to strengthen their defenses.</p>
               <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">This platform promotes security awareness, legal cooperation, and national resilience in cyberspace.</p>
-              <div className="mt-6 sm:mt-12 p-4 sm:p-8 bg-purple-900/20 rounded-lg border border-purple-500/30 backdrop-blur-lg">
-                <p className="text-lg sm:text-xl text-purple-300 font-semibold italic">
+              <div className="mt-6 sm:mt-12 p-4 sm:p-8 bg-blue-900/20 rounded-lg border border-blue-500/30 backdrop-blur-lg">
+                <p className="text-lg sm:text-xl text-blue-400 font-semibold italic">
                   "Cybersecurity cannot be imported; it must be built locally — by our people, for our organizations, and for our future."
                 </p>
               </div>
@@ -627,7 +627,7 @@ export default function Home() {
               e.stopPropagation();
               setSelectedImage(null);
             }}
-            className="absolute top-4 right-4 text-white hover:text-purple-400 transition-colors p-2 rounded-full bg-black/50 hover:bg-black/70"
+            className="absolute top-4 right-4 text-white hover:text-blue-400 transition-colors p-2 rounded-full bg-black/50 hover:bg-black/70"
             aria-label="Close image"
           >
             <svg
