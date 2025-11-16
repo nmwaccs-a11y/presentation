@@ -25,6 +25,7 @@ const slides = [
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const isScrolling = useRef(false);
@@ -126,6 +127,15 @@ export default function Home() {
   // Keyboard navigation
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
+      // Close image modal on ESC
+      if (e.key === 'Escape' && selectedImage) {
+        setSelectedImage(null);
+        return;
+      }
+      
+      // Don't navigate slides when image modal is open
+      if (selectedImage) return;
+      
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
         e.preventDefault();
         const nextSlide = Math.min(currentSlide + 1, slides.length - 1);
@@ -139,7 +149,7 @@ export default function Home() {
 
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [currentSlide, scrollToSlide]);
+  }, [currentSlide, scrollToSlide, selectedImage]);
 
   return (
     <div className="relative min-h-screen w-full" style={{ backgroundColor: '#000000' }}>
@@ -307,11 +317,12 @@ export default function Home() {
                       alt="Global Cyber Risk: Cost vs. Frequency Escalation (2020-2025)" 
                       width={1200}
                       height={800}
-                      className="max-w-full h-auto rounded-lg shadow-xl"
+                      className="max-w-full h-auto rounded-lg shadow-xl cursor-pointer hover:opacity-90 transition-opacity"
                       style={{ maxHeight: '60vh', objectFit: 'contain' }}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                       priority
                       unoptimized
+                      onClick={() => setSelectedImage({ src: '/global.png', alt: 'Global Cyber Risk: Cost vs. Frequency Escalation (2020-2025)' })}
                     />
                   </div>
                 </div>
@@ -345,10 +356,11 @@ export default function Home() {
                         src="/growthindex.jpeg" 
                         alt="Pakistan Digital Adoption Growth Index (2020-2025)" 
                         fill
-                        className="object-contain rounded-lg shadow-xl"
+                        className="object-contain rounded-lg shadow-xl cursor-pointer hover:opacity-90 transition-opacity"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         priority
                         unoptimized
+                        onClick={() => setSelectedImage({ src: '/growthindex.jpeg', alt: 'Pakistan Digital Adoption Growth Index (2020-2025)' })}
                       />
                     </div>
                   </div>
@@ -360,10 +372,11 @@ export default function Home() {
                         src="/pakistan.png" 
                         alt="Pakistan Estimated Annual Cyber Monetary Risk (2020-2025)" 
                         fill
-                        className="object-contain rounded-lg shadow-xl"
+                        className="object-contain rounded-lg shadow-xl cursor-pointer hover:opacity-90 transition-opacity"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         priority
                         unoptimized
+                        onClick={() => setSelectedImage({ src: '/pakistan.png', alt: 'Pakistan Estimated Annual Cyber Monetary Risk (2020-2025)' })}
                       />
                     </div>
                   </div>
@@ -545,11 +558,12 @@ export default function Home() {
                   alt="System Architecture Diagram" 
                   width={1200}
                   height={800}
-                  className="max-w-full h-auto rounded-xl shadow-2xl"
+                  className="max-w-full h-auto rounded-xl shadow-2xl cursor-pointer hover:opacity-90 transition-opacity"
                   style={{ maxHeight: 'clamp(300px, 70vh, 800px)', objectFit: 'contain' }}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 95vw, 1200px"
                   priority
                   unoptimized
+                  onClick={() => setSelectedImage({ src: '/systemArch.jpeg', alt: 'System Architecture Diagram' })}
                 />
               </div>
             </div>
@@ -599,6 +613,60 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Image Modal/Lightbox */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
+          style={{ zIndex: 9999 }}
+        >
+          {/* Close button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
+            className="absolute top-4 right-4 text-white hover:text-purple-400 transition-colors p-2 rounded-full bg-black/50 hover:bg-black/70"
+            aria-label="Close image"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          {/* Image */}
+          <div
+            className="relative max-w-[95vw] max-h-[95vh] p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              width={1200}
+              height={800}
+              className="max-w-full max-h-[95vh] w-auto h-auto rounded-lg shadow-2xl object-contain"
+              style={{ objectFit: 'contain' }}
+              unoptimized
+            />
+            {/* Image caption */}
+            <p className="text-white text-center mt-4 text-sm sm:text-base backdrop-blur-lg bg-black/30 px-4 py-2 rounded-lg">
+              {selectedImage.alt}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
