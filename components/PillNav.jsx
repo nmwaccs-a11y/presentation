@@ -275,7 +275,7 @@ const PillNav = ({
               logoRef.current = el;
             }}
           >
-            ReconX
+            BugChase
           </div>
         )}
 

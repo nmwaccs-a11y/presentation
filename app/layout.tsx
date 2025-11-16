@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ReconX - Presentation",
+  title: "BugChase - Presentation",
   description: "A Secure Bridge Between Organizations and Ethical Hackers",
 };
 
