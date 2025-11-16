@@ -15,8 +15,8 @@ const slides = [
   { id: 3, title: "Global Impact", name: "Global Impact of Cybercrime" },
   { id: 4, title: "Pakistan Digital", name: "Pakistan Going Digital – But At What Cost?" },
   { id: 5, title: "Server Takeover", name: "Server Takeover: Live Demo Preview" },
-  { id: 6, title: "Comparative Analysis", name: "Comparative Analysis of Global Platforms" },
-  { id: 7, title: "Our Solution", name: "Our Solution – ReconX" },
+  { id: 6, title: "Our Solution", name: "Our Solution – ReconX" },
+  { id: 7, title: "Comparative Analysis", name: "Comparative Analysis of Global Platforms" },
   { id: 8, title: "Module Flow", name: "Module Flow & Workflow" },
   { id: 9, title: "System Architecture", name: "System Architecture" },
   { id: 10, title: "Our Team", name: "Why We Are the Right Team" },
@@ -412,9 +412,38 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Slide 6 - Comparative Analysis */}
+        {/* Slide 6 - Our Solution */}
         <div 
           ref={(el) => { slideRefs.current[6] = el; }}
+          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
+          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
+        >
+          <div className="max-w-4xl w-full">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Our Solution – ReconX</h1>
+            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
+              <p>Our proposed solution is Pakistan's first national-level bug bounty platform, designed specifically to meet the country's cybersecurity and legal needs.</p>
+              <p>ReconX serves as a secure bridge between organizations and ethical hackers, allowing approved vulnerability testing, structured reporting, and legal payouts — all under the framework of the PECA Act.</p>
+              <p>The platform will help companies create bounty programs, researchers submit vulnerabilities, and triagers verify and prioritize issues. It promotes cybersecurity awareness, builds trust, and ensures that researchers can contribute legally and safely.</p>
+              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-purple-900/20 rounded-lg border border-purple-500/30">
+                <p className="text-white font-semibold mb-2">Core capabilities include:</p>
+                <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm sm:text-base">
+                  <li>Secure vulnerability submission portal</li>
+                  <li>Company dashboard</li>
+                  <li>Triage management system</li>
+                  <li>Researcher leaderboard</li>
+                  <li>Two-factor authentication</li>
+                  <li>JWT-based security</li>
+                  <li>Local reward management</li>
+                </ul>
+              </div>
+              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">In essence, this is not just a website — <span className="text-purple-400 font-bold">it is the foundation for a national cybersecurity ecosystem</span>.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 7 - Comparative Analysis */}
+        <div 
+          ref={(el) => { slideRefs.current[7] = el; }}
           className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
           style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
         >
@@ -463,35 +492,6 @@ export default function Home() {
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </div>
-        </div>
-
-        {/* Slide 7 - Our Solution */}
-        <div 
-          ref={(el) => { slideRefs.current[7] = el; }}
-          className="flex items-center justify-center min-h-screen px-3 sm:px-6 md:px-8 snap-start snap-always"
-          style={{ paddingTop: 'clamp(60px, 10vh, 100px)', paddingBottom: 'clamp(20px, 5vh, 40px)' }}
-        >
-          <div className="max-w-4xl w-full">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-6 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">Our Solution – ReconX</h1>
-            <div className="text-sm sm:text-base md:text-lg text-gray-300 space-y-2 sm:space-y-3 md:space-y-4 backdrop-blur-lg bg-black/30 p-4 sm:p-5 md:p-6 rounded-xl border border-white/10">
-              <p>Our proposed solution is Pakistan's first national-level bug bounty platform, designed specifically to meet the country's cybersecurity and legal needs.</p>
-              <p>ReconX serves as a secure bridge between organizations and ethical hackers, allowing approved vulnerability testing, structured reporting, and legal payouts — all under the framework of the PECA Act.</p>
-              <p>The platform will help companies create bounty programs, researchers submit vulnerabilities, and triagers verify and prioritize issues. It promotes cybersecurity awareness, builds trust, and ensures that researchers can contribute legally and safely.</p>
-              <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-purple-900/20 rounded-lg border border-purple-500/30">
-                <p className="text-white font-semibold mb-2">Core capabilities include:</p>
-                <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm sm:text-base">
-                  <li>Secure vulnerability submission portal</li>
-                  <li>Company dashboard</li>
-                  <li>Triage management system</li>
-                  <li>Researcher leaderboard</li>
-                  <li>Two-factor authentication</li>
-                  <li>JWT-based security</li>
-                  <li>Local reward management</li>
-                </ul>
-              </div>
-              <p className="text-lg sm:text-xl text-white mt-4 sm:mt-6">In essence, this is not just a website — <span className="text-purple-400 font-bold">it is the foundation for a national cybersecurity ecosystem</span>.</p>
             </div>
           </div>
         </div>
